@@ -1,0 +1,347 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{pgf}
+\usepackage{ragged2e}
+
+\setbeamertemplate{caption}[numbered]
+
+\title[Segurança Informática]
+{\textbf{Distribuições Linux para Segurança}}
+
+\subtitle{Segurança Informática}
+
+\institute[UE]
+
+\author[Miguel Carvalho, João Pereira]
+{\textbf{Professor:} Pedro Patinho\\
+\textbf{Realizado por:} Miguel Carvalho(43108) e João Pereira(42864)}
+
+\date[2020-2021]
+{\today}
+
+\usebackgroundtemplate{\includegraphics[height=\textwidth]{background.jpg}}
+
+\logo{\pgfputat{\pgfxy(-0.23,7.5)}{\pgfbox[right,base]{\includegraphics[width=.33\linewidth]{di.pdf}}}}
+\newcommand{\nologo}{\setbeamertemplate{logo}{}}
+
+\usetheme{Madrid}
+
+\begin{document}
+\maketitle
+\nologo
+%-----------------------------------------------------------------------------------
+\begin{frame}{O que são?}
+
+\justifying
+As \textbf{Distribuições Linux para Segurança} são distribuições Linux convencionais que apresentam um grande foco em segurança. O que principalmente as distingue de qualquer outra distribuição Linux é o facto de conterem várias ferramentas pré-instaladas e pré-configuradas que são necessárias para realizar testes de segurança e outras tarefas semelhantes.  
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas}
+
+As ferramentas encontram-se divididas em grupos, que são:
+\begin{itemize}
+    \item Information Gathering
+    \item Vulnerability Analysis
+    \item Wireless Attacks
+    \item Web Applications
+    \item Exploitation Tools
+    \item Stress Testing
+    \item Forensics Tools
+    \item Sniffing and Spoofing
+    \item Password Attacks
+    \item Maintaining Access
+    \item Reverse Engineering
+    \item Reporting Tools
+    \item Hardware Hacking
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Information Gathering}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{obter informações}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \justifying
+        \item \textbf{Nmap} - é um \textit{port scan} utilizado para descobrir serviços ou servidores numa rede de computadores;
+    \item \textbf{Sublist3r} - é uma ferramenta que permite listar os subdomínios de websites utilizando principalmente o OSINT;
+        \item \textbf{WHOIS} - é um protocolo TCP/IP utilizado para consultar informações de contato e DNS sobre entidades na Internet.
+        \item \textbf{DIG} - é utilizado para obter informação sobre o DNS
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Vulnerability Analysis}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{analisar informações}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \justifying
+        \item \textbf{BED} - projetada para verificar as \textit{daemons} em busca de potenciais buffer overflows;
+        \item \textbf{Osscanner} - é uma framework de acesso Oracle desenvolvida em Java;
+        \item \textbf{sqlmap} - teste de penetração que automatiza o processo de deteção e exploração de falhas através de SQL Injection e a obtenção do controlo de servidores de base de dados;
+        \item \textbf{SIPArmyKnife} - pesquisa de cross site scripting, SQL Injection, log injection, format string, buffer overlows, entre outras.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Wireless Attacks}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{atacar dispositivos Wireless}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{Aircrack-ng} - cracking de chaves 802.11 WEP e WPA-PSK que consegue recuperar chaves a partir de informação dos pacotes capturados;
+        \item \textbf{Kismet} - usada para fazer sniff de pacotes TCP, UDP, DHCP e ARP;
+        \item \textbf{coWPAtty} - permite realizar ataques em redes que utilizam o WPA com chaves pré-partilhadas;
+        \item \textbf{Reaver} - usa técninas de força bruta contra WiFis que usam PINs para obter as palavra-passes WPA/WPA2.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Web Applications}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{explorar as aplicações web}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{Zed Attack Proxy (ZAP)} - utilizada para encontrar vulnerabilidades em aplicações web;
+        \item \textbf{Wfuzz} - utilizada para realizar ataques de força bruta em aplicações web, pode ser usada para encontrar recursos não ligados (diretórios, scripts, entre outros);
+        \item \textbf{W3af} - tem como principal objetivo identificar e explorar vulnerabilidades em aplicações web;
+        \item \textbf{Grabber} - procura por vulenrabilidades em aplicações web.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Exploitation Tools}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{explorar falhas}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{Metasploit Framework} - é uma plataforma de testes de penetração que permite encontrar, explorar e validar falhas;
+        \item \textbf{cisco-auditing-tool} - capaz de procurar por vulnerabilidades comuns em routers da Cisco;
+        \item \textbf{exploitdb} - permite pesquisar falhas a partir da \textbf{The Exploit Database};
+        \item \textbf{Linux Exploit Suggester} - simples script que se mantem atualizado em relação a falhas e sugere possivéis usos de falhas para ganhar acesso root do sistema.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Stress Testing}
+
+Neste grupo estão todas as ferramentas que permitem realizar \textbf{testes de stress}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{DHCPig} - permite attacar um servidor DHCP ao consumir todos os IPs disponíveis;
+        \item \textbf{FunkLoad} - permite testar aplicações web causando um load no servidor;
+        \item \textbf{inviteflood} - envia mensagens fazendo flood através de UDP/IP;
+        \item \textbf{rtpflood} - faz um ataque de RTP a qualquer dispositivo que processa RTP.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Forensics Tools}
+
+Neste grupo estão todas as ferramentas que permitem realizar \textbf{testes de forence}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{bulk-extractor} - extrai informações como mail, credit card, URLs e outro tipo de informação a partir de ficheiros de evidencias;
+        \item \textbf{Cuckoo} - analisador de malwares;
+        \item \textbf{Dumpzilla} - tem como objetivo extrair toda a informação interessante dos browsers Firefox, Iceweasel e do Seamonkey para ser analisado;
+        \item \textbf{iPhone-Backup-Analyzer} - permite aceder aos ficheiros de configurações, aos ficheiros do utilizador e analisar a base de dados de um iPhone ou outro dispositivo IOS.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Sniffing and Spoofing}
+
+Neste grupo estão todas as ferramentas que permitem realizar \textbf{Sniffing} e \textbf{Spoofing}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{Bettercap} - é um canivete suíço para ataques na rede e monitorização;
+        \item \textbf{Burp Suite} - permite realizar testes de segurança em aplicações web;
+        \item \textbf{iSMTP} - usado para testar servidores SMTP;
+        \item \textbf{rtpbreak} - permite detetar, reconstruir e analisar uma sessão RTP.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Password Attacks}
+
+Neste grupo estão todas as ferramentas que permitem realizar \textbf{ataques em passwords}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{BruteSpray} - utiliza força bruta ao tentar utilizar as credencias predefinidas pelos serviços;
+        \item \textbf{CmosPwd} - permite desencriptar a palavra-passe guardada na CMOS usada para aceder à BIOS;
+        \item \textbf{crowbar} - usa força bruta e pode ser usada para testes de penetração;
+        \item \textbf{RainbowCrack} - usado para fazer crack de hashes através de rainbow tables.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Maintaining Access}
+
+Neste grupo estão todas as ferramentas que permitem \textbf{manter o acesso}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{CryptCat} - permite ler e escrever dados em conexões encriptadas utilizando TCP ou UDP;
+        \item \textbf{Cymothoa} - permite injetar código num processo existente;
+        \item \textbf{Dns2tcp} - tem como principal objetivo retransmitir conexões TCP através de tráfego DNS;
+        \item \textbf{pwnat} - permite que qualquer número de utilizadores atrás de uma rede NAT comuniquem com um servidor atrás de outra rede NAT.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Reverse Engineering}
+
+Neste grupo estão todas as ferramentas que permitem fazer \textbf{engenharia reversa}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{apktool} - permite fazer Reverse Engineering numa aplicação Android;
+        \item \textbf{dex2jar} - permite converter Dalvik Executable (.dex) para (.jar);
+        \item \textbf{edb-debugger} - permite fazer debug de APIs;
+        \item \textbf{YARA} - permite criar descrições de familias de malwares baseados em texto ou padrões binários.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Reporting Tools}
+
+Neste grupo estão todas as ferramentas que permitem criar \textbf{relatórios}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{CaseFile} - permite contruir gráficos com dados guardados a partir de investigações;
+        \item \textbf{dos2unix} - permite converter ficheiros de dos para unix;
+        \item \textbf{pipal} - mostra o estado e a informação para ajudar a analisar passwords;
+        \item \textbf{python-rdpy} - implemetanção do Microsoft RDP em Python.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Ferramentas: Hardware Hacking}
+
+Neste grupo estão todas as ferramentas que permitem utilizar \textbf{bibliotecas}.
+
+\hfill
+
+Algumas das ferramentas pertencentes a este grupo:
+    \begin{itemize}
+        \item \textbf{android-sdk} - contêm as bibliotecas para desenvolver para Android;
+        \item \textbf{Arduino} - contêm as bibliotecas para desenvolver para placas Arduino;
+        \item \textbf{Sakis3G} - permite estabelecer conexões 3g;
+        \item \textbf{smali} - assembler para dex usado pelo dalvik.
+    \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Distribuições Linux para Pentesting}
+
+\begin{itemize}
+    \item ArchStrike
+    \item BackBox
+    \item BlackArch
+    \item KaliLinux
+    \item ParrotSecurityOS
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{ArchStrike}
+
+\begin{figure}[h]
+    \includegraphics[width=0.2\textwidth]{distros/archstrike.png}
+    \centering
+\end{figure}
+
+\begin{itemize}
+    \item Antigamente denominado por \textbf{ArchAssault}
+    \item Baseado em: \textbf{Arch Linux}
+    \item Ambiente gráfico: \textbf{Openbox}
+    \item Estado: \textbf{Em ativo desenvolvimento}
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{BackBox Linux}
+
+\begin{figure}[h]
+    \includegraphics[width=0.2\textwidth]{distros/backbox.png}
+    \centering
+\end{figure}
+
+\begin{itemize}
+    \item Baseado em: \textbf{Ubuntu, Debian}
+    \item Ambiente gráfico: \textbf{Xfce}
+    \item Estado: \textbf{Em ativo desenvolvimento}
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{BlackArch Linux}
+
+\begin{figure}[h]
+    \includegraphics[width=0.2\textwidth]{distros/blackarch.png}
+    \centering
+\end{figure}
+
+\begin{itemize}
+    \item Baseado em: \textbf{Arch}
+    \item Ambiente gráfico: \textbf{Awesome, Blackbox, Fluxbox, spectrwn}
+    \item Estado: \textbf{Em ativo desenvolvimento}
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{Kali Linux}
+
+\begin{figure}[h]
+    \includegraphics[width=0.2\textwidth]{distros/kali.png}
+    \centering
+\end{figure}
+
+\begin{itemize}
+    \item Baseado em: \textbf{Debian(Testing)}
+    \item Ambiente gráfico: \textbf{Enlightenment, GNOME, KDE Plasma, LXDE, MATE, Xfce(Default)}
+    \item Estado: \textbf{Em ativo desenvolvimento}
+\end{itemize}
+    
+\end{frame}
+%-----------------------------------------------------------------------------------
+\begin{frame}{ParrotSecurityOS}
+
+\begin{figure}[h]
+    \includegraphics[width=0.2\textwidth]{distros/parrot.png}
+    \centering
+\end{figure}
+    
+\begin{itemize}
+    \item Baseado em: \textbf{Debian(Testing)}
+    \item Ambiente gráfico: \textbf{KDE Plasma e MATE}
+    \item Estado: \textbf{Em ativo desenvolvimento}
+\end{itemize}
+    
+\end{frame}
+%-----------------------------------------------------------------------------------
+\end{document}
